@@ -128,3 +128,7 @@
 .contact_div {
   text-align: center;
 }
+
+body {
+  display: flex;
+}

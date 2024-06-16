@@ -57,27 +57,8 @@ function sort(arr) {
   });
 }
 
-// document.querySelector(".newest").addEventListener("click", function () {
-//   sortByDate(contacts);
-//   render(contacts);
-// });
-
-// function sortByDate(arr) {
-//   arr.sort((a, b) => {
-//     if (a.creationDate < b.creationDate) {
-//       return -1;
-//     }
-//     if (a.creationDate > b.creationDate) {
-//       return 1;
-//     }
-//     return 0;
-//   });
-// }
-
-// sortByDate(contacts);
-
-// console.log(contacts);
-
+const selectElement = document.querySelector(".female");
+const selectElement2 = document.querySelector(".male");
 document.querySelector(".button1").addEventListener("click", function () {
   sortByGender(contacts);
   render(contacts);
