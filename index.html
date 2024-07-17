@@ -20,13 +20,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="aboutme_wrapper">
+    <aside class="aboutme_wrapper">
       <div class="about_me">
         <img src="./src/Logo.png" alt="Лого" width="126px" height="44px" />
-        <img class="my_picture" src="./src/female_icon.png" alt="Контакт" />
-        <p class="my_name">Nadezhda</p>
-        <p class="my_email">nadezhda.verkhovykh@gmail.com</p>
-
+        <div class="about_me_data">
+          <img class="my_picture" src="./src/female_icon.png" alt="Контакт" />
+          <p class="my_name">Nadezhda</p>
+          <p class="my_email">nadezhda.verkhovykh@gmail.com</p>
+        </div>
         <div class="data">
           <div class="my_birthday">
             <img
@@ -43,7 +44,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </aside>
 
     <div class="container">
       <div class="form_wrapper">
@@ -54,16 +55,18 @@
         <input class="list" type="text" id="listForm" />
         <button class="button1" type="submit">
           Gender <img src="./src/sort_icon.png" alt="Отсортировать" />
-          <select name="" id="">
+
+          <select class="select_gender" id="">
             <option value="male" class="male">Male</option>
             <option value="female" class="female">Female</option>
           </select>
         </button>
         <button class="button2" type="submit">
           Sort<img src="./src/sort_icon.png" alt="Отсортировать" />
-          <select name="" id="">
-            <option value="">A-Z</option>
-            <option value="" class="newest">Newest</option>
+          <select class="sort" id="">
+            <option value="a-z">A-Z</option>
+            <option value="z">Z-A</option>
+            <option value="date">Newest</option>
             <option value="">Oldest</option>
           </select>
         </button>
@@ -84,5 +87,92 @@
         </div> -->
       </div>
     </div>
+    <div class="edit_contact">
+      <div class="info_details__main">
+        <img src="./src/male_icon.png" alt="Icon" class="contact_edit" />
+        <p class="contact_edit__name">Kurt Cobain</p>
+        <p class="contact_edit__about">Best friend</p>
+        <button class="edit_contact__button">Edit contact</button>
+      </div>
+      <div class="info">
+        <div class="info_details">
+          <div>
+            <p class="contact_edit__about">Phone number</p>
+            <p class="contact_edit__info">0706312495</p>
+          </div>
+          <span> <img src="./src/phone info.png" alt="" /></span>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="info_details">
+          <div>
+            <p class="contact_edit__about">Email Address</p>
+            <p class="contact_edit__info">kurtcobain@gmail.com</p>
+          </div>
+          <span> <img src="./src/message info.png" alt="" /></span>
+        </div>
+      </div>
+      <div class="info">
+        <p class="contact_edit__about">Date of create</p>
+        <p class="contact_edit__info">09.06.2024</p>
+      </div>
+    </div>
+    <dialog class="modal">
+      <form class="modal_form">
+        <p class="modal_text">Add new contact</p>
+        <div class="modal_add">
+          <img src="./src/male_icon.png" alt="" />
+          <input type="file" name="image" id="profile_pic" /><br />
+          <img id="img" src="" alt="" width="70px" height="70px" />
+        </div>
+
+        <input
+          type="text"
+          class="input_modal"
+          name="name"
+          placeholder="Name"
+          required
+        /><br />
+        <input
+          type="text"
+          class="input_modal"
+          name="surname"
+          placeholder="Surname"
+          required
+        /><br />
+        <input
+          type="text"
+          class="input_modal"
+          name="about"
+          placeholder="About"
+          required
+        /><br />
+        <input
+          type="email"
+          class="input_modal"
+          name="mail"
+          placeholder="Email"
+          required
+        /><br />
+        <input
+          type="text"
+          class="input_modal"
+          name="phone"
+          placeholder="Phone"
+          required
+        /><br />
+        <div class="modal_add2">
+          <select class="select_gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option></select
+          ><br />
+
+          <button type="submit" class="modal_add_contact">
+            Add new contact
+          </button>
+        </div>
+      </form>
+    </dialog>
   </body>
 </html>
